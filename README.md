@@ -92,7 +92,7 @@ Running last command above will prompt that server is running on port 5000.<br>
 # Terminal commands for a performing actions
 
 | Serial No. | Commands | Descriptions|
-| :--- | --- |
+| :--- | --- | --- |
 | 01 | pwd | Show the present working directory| 
 | 02 | ll  | Show the all the files in the directory| 
 | 03 | ls | Show the all the folders in the directory | 
