@@ -1,0 +1,1092 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bg-color: #081b29;
+    --second-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+    --black-color: #000000;
+    --saffron: #FF671F;
+    --green: #046A38;
+}
+
+html{
+    font-size: 62.5%;
+    /* overflow: hidden; */
+    overflow: scroll;
+    /* overflow:auto; */
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--main-color);
+   
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+
+
+/* Navbar */
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 5%;
+  background: var(--second-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: .3s;
+}
+
+/* Sticky nav-bar  */
+.header.sticky{
+  background: var(--second-color);
+}
+
+.logo{
+  position: relative;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.navbar{
+  position: relative;
+  /* background: var(--second-color); */
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  font-weight: 500;
+  margin-left: 50rem;
+  transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+}
+
+
+
+.navbar a {
+  font-size: 3.7rem;
+  /* color: var(--text-color); */
+  font-weight: 500;
+  transition: .3s;
+}
+
+.navbar a .span1{
+  font-size: 3.7rem;
+  color: var(--saffron);
+  font-weight: 500;
+  transition: .3s;
+}
+
+.navbar a .span2{
+  font-size: 3.7rem;
+  color: var(--text-color);
+  font-weight: 500;
+
+}
+
+
+.navbar a .span3{
+  font-size: 3.7rem;
+  color: var(--green);
+  font-weight: 500;
+  transition: .3s;
+}
+
+
+.navbar a:hover{
+  color: var(--text-color);
+}
+
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 3.5rem;
+  margin-top: 10rem;
+  margin-left: 12rem;
+  margin-right: 2rem;
+  padding: 2rem 8rem;
+  width: 100rem;
+
+}
+
+.grid-container .celebrity-box{
+  position: relative;
+  border-radius: .5rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  height: 32rem;
+  width: 35rem;
+  padding-left: 2rem;
+  /* overflow: hidden; */
+  display: flex;
+}
+
+.card-wrapper {
+    margin: 7% 0%;
+  }
+  
+.card-border-0{
+    background: var(--bg-color);
+    height: 19vw;
+    width: 23vw;
+    padding: 2vw 4vw; 
+}
+
+/* image-circle */
+.about-img{
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img img{
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  border: .2rem solid var(--main-color);
+}
+
+.about-img .circle-spin{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-top: .2rem solid var(--second-color);
+  border-bottom: .2rem solid var(--second-color);
+  border-left: .2rem solid var(--main-color);
+  border-right: .2rem solid var(--main-color);
+  animation: aboutSpinner 8s linear infinite;
+}
+
+
+.card-title {
+  letter-spacing: 1.1px;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.card-text {
+  font-family: MerriweatherRegular;
+  font-size: 22px;
+  line-height: initial;
+  
+}
+
+/* Celebrities Descriptions */
+.celebrity-box{
+  overflow: hidden;
+}
+
+.celebrity-box:hover img{
+  transform: scale(1.1);
+}
+
+
+.celebrity-box .projects-layer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, .6), var(--text-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: .5s ease;
+}
+
+.celebrity-box:hover .projects-layer{
+  transform: translateY(0);
+}
+
+
+
+.projects-layer p{
+  font-size: 1.3rem;
+  margin: .3rem 0 1rem;
+  color: #000000;
+}
+
+
+.projects-layer h2{
+  color: #FF671F;
+}
+
+/* .projects-layer a i{
+  font-size: 2rem;
+  color: var(--second-color);
+} */
+
+/* ------------------ */
+
+/* Drop Zone */
+#row-main{
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+  margin-left: 15rem;
+  margin-right: 1rem;
+  width: 100rem;
+}
+
+.dropzone {
+  border-style: dashed;
+  border-color: var(--black-color);
+  border-radius: .8rem;
+  margin-top: 5rem;
+  padding-top: 10rem;
+ 
+}
+
+.dropzone .dz-preview {
+  margin-left: 40rem;
+}
+
+.dropzone-div{
+width: 100rem;
+margin-left: 15rem;
+}
+
+.note{
+  font-size: 1.5rem;
+}
+
+/* Button CSS */
+.btn-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 34.5rem;
+  height: 5rem;
+  margin-left: 50rem;
+  margin-top: 1rem;
+}
+
+
+
+.btn-box.btns .btn{
+  cursor: pointer;
+}
+
+.btn-box .btn{
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 34.5rem;
+  height: 5rem;
+  width: 15rem;
+  height: 100%;
+  background: var(--main-color);
+  border: .2rem solid var(--main-color);
+  border-radius: .8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  color: var(--bg-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.resultHolderHeading{
+  font-size: 20px;
+  line-height: initial;
+  color: blue;
+  text-align: center;
+  border-style: dashed;
+  border-color: var(--black-color);
+  border-radius: .8rem;   
+  width: auto;
+  padding: 10px;
+  position: relative;
+}
+
+.error {
+  font-size: 20px;
+  line-height: initial;
+  color: blue;
+  text-align: center;
+  border-style: dashed;
+  border-color: var(--black-color);
+  border-radius: .8rem;   
+  width: auto;
+  padding: 10px;
+  position: relative;
+}
+
+#classTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 35rem;
+  height: 35rem;
+}
+
+#classTable td, #classTable th {
+  border: 1px solid var(--main-color);
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#classTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--second-color);
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Result */
+
+
+.result-div{
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+  justify-content: space-between;
+}
+
+.result-div .result-internal-div{
+  position: relative;
+  border-radius: .5rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  overflow: hidden;
+}
+
+.result-border1{
+  font-size: 20px;
+  line-height: initial;
+  color: var(--main-color);
+  text-align: center;
+  border-style: dashed;
+  border-color: var(--black-color);
+  border-radius: .8rem;   
+  width:36rem;
+  height: 52rem;
+  /* padding: 10px; */
+  margin-top: 1rem;
+  padding: .8rem 1rem;
+  position: relative;
+}
+
+.result-border2{
+  font-size: 20px;
+  line-height: initial;
+  color: var(--main-color);
+  text-align: center;
+  border-style: dashed;
+  border-color: var(--black-color);
+  border-radius: .8rem;   
+  width:38rem;
+  height: 38rem;
+  padding-top: 1.3rem;
+  padding-left: 1.3rem;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.identification{
+  background: var(--second-color);
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+
+/* -----------------------Footer------------------------------ */
+.footerClass{
+  /* position: static; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 2rem 4%; */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
+  background: var(--second-color);
+  margin-top: 4rem;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+}
+
+
+
+.footer-text p {
+  font-size: 1.6rem;
+  position: relative;
+}
+
+
+
+
+/* About sppiner */
+@keyframes aboutSpinner{
+  100%{
+      transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* ------------------Break Point---------------------  */
+@media(max-width: 1250px){
+  .navbar a {
+    margin-left: 40rem;
+  }
+
+  .grid-container .celebrity-box{
+    height: 25rem;
+    width: 25rem;
+   
+  }
+  
+  /* .card-border-0{
+      height: 12vw;
+      width: 25vw;
+  } */
+
+  .about-img{
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .projects-layer p{
+    font-size: 1rem;
+    margin: .3rem 0 1rem;
+    color: #000000;
+  }
+  .card-border-0{
+    padding: 2vw 3vw; 
+}
+
+  .dropzone-div{
+    width: 95rem;
+    margin-left: 5rem;
+    padding-right: 3rem;
+    }
+
+
+  .btn-box {
+    margin-left: 35rem;
+   
+    margin-top: 1rem;
+  }
+
+ 
+
+  .result-border1{
+    width:36rem;
+    height: 42rem;
+    padding: 1rem 4rem;
+  }
+
+  .grid-result-container .div1{
+    margin-left: 25rem;
+
+ }
+ 
+ #resultHolderHeading p{
+   margin-left: 0rem;
+   margin-right: 20rem;
+ }
+}
+
+/* --------------------------------------  */
+@media (max-width: 1150px){
+
+  .navbar a {
+    margin-left: 30rem;
+  }
+
+  .grid-container .celebrity-box{
+    height: 30rem;
+    width: 30rem;
+  }
+  
+  .card-border-0{
+      height: 26vw;
+      width: 25vw;
+  }
+
+  .card-border-0{
+    padding: 2vw 4vw; 
+}
+
+  .about-img{
+    width: 20rem;
+    height: 20rem;
+  }
+ 
+  .dropzone-div{
+    width: 95rem;
+    margin-left: 0rem;
+    }
+
+  .btn-box {
+    margin-left: 30rem;
+    margin-top: 1rem;
+  }
+
+  /* .grid-result-container{
+    grid-template-columns: repeat(1, 1fr);
+  } */
+
+
+
+.result-border1{
+  width:36rem;
+  height: 48rem;
+  padding: 1rem 4rem;
+}
+
+.result-border2{
+  width:38rem;
+  height: 38rem;
+}
+
+section .grid-result-container .div1{
+   margin-left: 5rem;
+}
+
+#resultHolderHeading p{
+ /* margin-left: 50rem; */
+ margin-right: 12rem;
+}
+
+.identification{
+  width: 133%;
+}
+.footerClass{
+  width: 133%;
+}
+
+}
+
+/* --------------------------------------  */
+
+@media (max-width: 991px){
+
+  .card-title {
+    letter-spacing: 1.1px;
+  }
+
+  .card-border-0{
+    height: 25rem;
+    width:23rem;
+  }
+
+  .dropzone-div{
+    width: 95rem;
+    margin-left: 0rem;
+    }
+
+  .btn-box {
+    margin-left: 30rem;
+    margin-top: 1rem;
+  }
+
+  .grid-container .celebrity-box{
+    height: 25rem;
+    width: 25rem;
+   
+  }
+  
+  .card-border-0{
+      height: 24vw;
+      width: 25vw;
+  }
+
+  .about-img{
+    width: 15rem;
+    height: 15rem;
+  }
+  
+  section .grid-result-container .div1{
+    margin-left: 5rem;
+ }
+
+  .result-border1{
+    width:36rem;
+    height: 42rem;
+    padding: 1rem 4rem;
+  }
+  
+  section .grid-result-container .div1{
+    margin-left: 25rem;
+ }
+  #resultHolderHeading p{
+   margin-left: 0rem;
+   margin-right: 15rem;
+  }
+ 
+}
+
+/* ------------------------------------------ */
+
+@media (max-width: 850px){
+  .navbar a {
+    margin-left: 30rem;
+  }
+
+  .grid-container{
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-container .celebrity-box{
+    height: 30rem;
+    width: 30rem;
+  }
+  
+  .card-border-0{
+    height: 25rem;
+    width:25rem;
+  }
+
+  .about-img{
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .card-title {
+    letter-spacing: 0.5px;
+    margin-left: 20px;
+  }
+
+  .projects-layer p{
+    font-size: 1.5rem;
+  }
+  
+  .projects-layer h2{
+    font-size: 2rem;
+  }
+
+  .dropzone-div{
+    width: 95rem;
+    margin-left: 0rem;
+    }
+
+  .btn-box {
+    margin-left: 30rem;
+    margin-top: 1rem;
+  }
+
+  .result-border1{
+    width:40rem;
+    height: 60rem;
+    padding: 4rem 7rem;
+  }
+ 
+  .identification{
+    width: 143%;
+  }
+
+  .footerClass{
+    width: 143%;
+  }
+}
+
+
+/* --------------------------------------- */
+
+
+
+@media (max-width: 768px){
+  html{
+    font-size: 50%;
+}
+
+.navbar a {
+  margin-left: 30rem;
+}
+
+.grid-container{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-container .celebrity-box{
+height: 40rem;
+width: 40rem;
+}
+
+.card-border-0{
+  height: 38rem;
+  width:35rem;
+}
+
+.about-img{
+width: 30rem;
+height: 30rem;
+}
+.card-title {
+  letter-spacing: 0.5px;
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+.projects-layer p{
+  font-size: 1.5rem;
+}
+
+.projects-layer h2{
+  font-size: 2rem;
+}
+
+
+.dropzone-div{
+  width: 95rem;
+  margin-left: 0rem;
+  }
+
+.btn-box {
+  margin-left: 30rem;
+  margin-top: 1rem;
+}
+
+.grid-result-container{
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.identification{
+  width: 143%;
+}
+
+.result-border1{
+  width:50rem;
+  height: 70rem;
+  padding: 4rem 7rem;
+}
+
+.result-border2{
+  width:50rem;
+  height: 40rem;
+  padding: 2rem 2rem;
+}
+
+#classTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 45rem;
+  height: 35rem;
+}
+
+#classTable td, #classTable th {
+  border: 1px solid var(--main-color);
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#classTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--second-color);
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+
+.footerClass{
+  width: 143%;
+}
+
+}
+
+/* ------------------------------------------ */
+@media (max-width: 650px){
+  .identification{
+    width: 143%;
+  }
+  .footerClass{
+    width: 143%;
+  }
+}
+
+/* ------------------------------------------ */
+
+/* ------------------------------------------ */
+@media (max-width: 600px){
+  .identification{
+    width: 173%;
+  }
+  .footerClass{
+    width: 173%;
+  }
+}
+
+/* ------------------------------------------ */
+
+
+/* ------------------------------------------ */
+@media (max-width: 575px){
+  html{
+          font-size: 50%;
+  }
+
+  .navbar a {
+    margin-left: 30rem;
+  }
+
+
+  .grid-container{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-container .celebrity-box{
+  height: 40rem;
+  width: 40rem;
+}
+
+.card-border-0{
+  height: 36rem;
+  width:36rem;
+}
+
+.about-img{
+  width: 30rem;
+  height: 30rem;
+}
+
+.card-title {
+  letter-spacing: 1px;
+}
+
+.projects-layer p{
+  font-size: 1.5rem;
+}
+
+.projects-layer h2{
+  font-size: 2rem;
+}
+
+.dropzone-div{
+  width: 95rem;
+  margin-left: 0rem;
+  }
+
+.btn-box {
+  margin-left: 30rem;
+  margin-top: 1rem;
+}
+
+.identification{
+  width: 165%;
+}
+
+.footerClass{
+  width: 165%;
+}
+}
+
+
+/* ------------------------------------------ */
+@media (max-width: 550px){
+  .identification{
+    width: 183%;
+  }
+  .footerClass{
+    width: 183%;
+  }
+}
+
+/* ------------------------------------------ */
+
+/* ------------------------------------------ */
+@media (max-width: 490px){
+  .identification{
+    width: 183%;
+  }
+  .footerClass{
+    width: 183%;
+  }
+}
+
+/* ------------------------------------------ */
+
+
+/* --------------------------- */
+
+@media (max-width: 462px){
+
+  .navbar a {
+    margin-left: 30rem;
+  }
+
+.grid-container{
+grid-template-columns: repeat(2, 1fr);
+margin-left: 1rem;
+padding-left: 15rem;
+}
+
+
+.grid-container .celebrity-box{
+height: 40rem;
+width: 40rem;
+padding-left: 4rem;
+padding-top: 2rem;
+padding-bottom: 3rem;
+
+}
+
+.card-border-0{
+height: 35rem;
+width:30rem;
+}
+
+.about-img{
+width: 25rem;
+height: 25rem;
+}
+
+.card-title {
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.projects-layer p{
+  font-size: 1.5rem;
+}
+
+.projects-layer h2{
+  font-size: 2rem;
+}
+
+.dropzone-div{
+  width: 95rem;
+  margin-left: 0rem;
+  }
+
+.btn-box {
+  margin-left: 30rem;
+  margin-top: 1rem;
+}
+
+.identification{
+  width: 203%;
+}
+
+.footerClass{
+  width: 203%;
+}
+
+}
+
+/* ------------------------------------------ */
+@media (max-width: 450px){
+  .identification{
+    width: 203%;
+  }
+  .footerClass{
+    width: 203%;
+  }
+}
+
+/* ------------------------------------------ */
+
+/* ------------------------------------------ */
+@media (max-width: 400px){
+  .identification{
+    width: 228%;
+  }
+  .footerClass{
+    width: 228%;
+  }
+}
+
+/* ------------------------------------------ */
+
+/* ------------------------------------------ */
+@media (max-width: 350px){
+  .identification{
+    width: 278%;
+  }
+  .footerClass{
+    width: 278%;
+  }
+}
+
+/* ------------------------------------------ */
+
+.grid-result-container{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  gap: 3.5rem;
+  margin-top: 10rem;
+  margin-left: 12rem;
+  margin-right: 2rem;
+  padding: 2rem 8rem;
+  width: 100rem;
+}
+
+.grid-result-container .div-1{
+  position: relative;
+  display: flex;
+}
+
+.div1{
+   margin-left: 45rem;
+}
+
+#resultHolderHeading p{
+  margin-left: 15rem;
+}
+
+
+
+
+
+section{
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+
+/* footer{
+  min-width: 100vh;
+} */
