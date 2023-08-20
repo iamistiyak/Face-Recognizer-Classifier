@@ -109,10 +109,5 @@ Running last command above will prompt that server is running on port 5000.<br>
 | 10 | :wq  | Save the file|<br><br><br><br>
 
 # Functional Video
-
-
-
-
-
 https://github.com/iamistiyak/Face-Recognizer-Classifier/assets/86108816/71ca0e12-e947-4a5c-a8e9-97d7a322aa9e
 
