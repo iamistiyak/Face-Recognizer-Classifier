@@ -1,3 +1,6 @@
+![uploading](https://github.com/iamistiyak/Face-Recognizer-Classifier/assets/86108816/3e7641f2-3998-4c4a-ad76-a2d55c9458a7)
+![Uploading structure.png…]()
+o![Uploading results.png…]()
 # Face-Recognizer-Classifier
 **Functionality :** Upload the image and get the result.<br>
 **Description:** I have created this web-app for classify and predict the person's identifications based on the thier image. I am mainly consider the visible eyes for images.
@@ -105,110 +108,7 @@ Running last command above will prompt that server is running on port 5000.<br>
 | 09 |  esc | Exit from the insert mode | 
 | 10 | :wq  | Save the file|<br><br><br><br>
 
-# Functional Videoctions.mp4
-
-results.png
-structure.png
-uploading.png
-server
-README.md
-faceRecognizerModelBuilding.ipynb
-Documentation • Share feedback
-BreadcrumbsFace-Recognizer-Classifier
-/
-README.md
-in
-main
-
-Edit
-
-Preview
-Indent mode
-
-Tabs
-Indent size
-
-8
-Line wrap mode
-
-Soft wrap
-Selection deleted
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
+# Functional Video
+![Uploading probabilities.png…]()
 
 
