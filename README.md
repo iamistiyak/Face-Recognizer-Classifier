@@ -1,6 +1,4 @@
-![uploading](https://github.com/iamistiyak/Face-Recognizer-Classifier/assets/86108816/3e7641f2-3998-4c4a-ad76-a2d55c9458a7)
-![Uploading structure.png…]()
-o![Uploading results.png…]()
+
 # Face-Recognizer-Classifier
 **Functionality :** Upload the image and get the result.<br>
 **Description:** I have created this web-app for classify and predict the person's identifications based on the thier image. I am mainly consider the visible eyes for images.
@@ -108,6 +106,10 @@ Running last command above will prompt that server is running on port 5000.<br>
 | 09 |  esc | Exit from the insert mode | 
 | 10 | :wq  | Save the file|<br><br><br><br>
 
+
 # Functional Video
-https://github.com/iamistiyak/Face-Recognizer-Classifier/assets/86108816/71ca0e12-e947-4a5c-a8e9-97d7a322aa9e
+
+
+
+https://github.com/iamistiyak/Face-Recognizer-Classifier/assets/86108816/5613737f-3f98-4dae-9a85-47b28c65d94c
 
