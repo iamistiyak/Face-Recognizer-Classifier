@@ -23,8 +23,7 @@ web-server: I have used **ngin-x** receive the http request from the user and co
 | 08 | Create the AWS accoun |
 | 09 | Install the ngin-x on the server |
 | 10 | Download WinSCP software to upload the all files on the server |
-| 11 | Host the web-app |
-<br><br><br><br>
+| 11 | Host the web-app |<br><br><br><br>
 
 # Deploy this app to cloud (AWS EC2)
 
