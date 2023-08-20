@@ -84,7 +84,7 @@ ssh -i "C:\Users\shaik.ssh\gpfr.pem"  ubuntu@.us-east-2.compute.amazonaws.com
 ```
 sudo apt-get install python3-pip
 sudo pip3 install -r /home/ubuntu/faceRecognizer/server/requirements.txt
-python3 /home/ubuntu/BangloreHomePrices/server/server.py
+python3 /home/ubuntu/faceRecognizer/server/server.py
 ```
 Running last command above will prompt that server is running on port 5000.<br>
 8. Now just load your cloud url in browser (for me it was http://ec2-df.compute.amazonaws.com/) and this will be fully functional website running in production cloud environment<br><br>
