@@ -101,6 +101,8 @@ Running last command above will prompt that server is running on port 5000.<br>
 | 05 | press ‘q’ | This will enable you to enter command again.| 
 | 06 | cd sites-enabled/ | Enter inside the folder | 
 | 07 | sudo vim gpfr.conf  | Create the file | 
-| 08 | press  i | Insert mode enable | 
+| 08 | press  'i' | Insert mode enable | 
 | 09 |  esc | Exit from the insert mode | 
 | 10 | :wq  | Save the file|<br><br><br><br>
+
+<video src='https://github.com/iamistiyak/Face-Recognizer-Classifier/blob/main/outputs/functions.mp4' width=700 height=500/>
