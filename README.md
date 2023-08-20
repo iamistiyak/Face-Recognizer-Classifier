@@ -9,4 +9,4 @@ Backend: I have used **Flask**<br>
 web-server: I have used **ngin-x** receive the http request from the user and communucate with the model and return the values(reverse proxy).
 
 # Basic architecture
-<img src="[https://your-image-url.type](https://github.com/iamistiyak/Face-Recognizer-Classifier/blob/main/outputs/structure.png)https://github.com/iamistiyak/Face-Recognizer-Classifier/blob/main/outputs/structure.png" width="700" height="500">
+<img src="https://github.com/iamistiyak/Face-Recognizer-Classifier/blob/main/outputs/structure.png" width="700" height="500">
