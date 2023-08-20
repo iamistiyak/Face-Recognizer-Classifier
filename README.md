@@ -30,7 +30,7 @@ web-server: I have used **ngin-x** receive the http request from the user and co
 1. Create EC2 instance using amazon console, also in security group add a rule to allow HTTP incoming traffic
 2. Now connect to your instance using a command like this,
 ```
-ssh -i "C:\Users\Viral\.ssh\Banglore.pem" ubuntu@ec2-3-133-88-210.us-east-2.compute.amazonaws.com
+ssh -i "C:\Users\shaik.ssh\gpfr.pem"  ubuntu@.us-east-2.compute.amazonaws.com
 ```
 3. nginx setup
    1. Install nginx on EC2 instance using these commands,
@@ -48,16 +48,16 @@ ssh -i "C:\Users\Viral\.ssh\Banglore.pem" ubuntu@ec2-3-133-88-210.us-east-2.comp
    sudo service nginx stop
    sudo service nginx restart
    ```
-   4. Now when you load cloud url in browser you will see a message saying "welcome to nginx" This means your nginx is setup and running.
-4. Now you need to copy all your code to EC2 instance. You can do this either using git or copy files using winscp. We will use winscp. You can download winscp from here: https://winscp.net/eng/download.php
-5. Once you connect to EC2 instance from winscp (instruction in a youtube video), you can now copy all code files into /home/ubuntu/ folder. The full path of your root folder is now: **/home/ubuntu/BangloreHomePrices**
+   4. Now when you load cloud url in browser you will see a message saying "welcome to nginx" This means your nginx is setup and running.<br>
+4. Now you need to copy all your code to EC2 instance. You can do this either using git or copy files using winscp. We will use winscp. You can download winscp from here: https://winscp.net/eng/download.php<br>
+5. Once you connect to EC2 instance from winscp (instruction in a youtube video), you can now copy all code files into /home/ubuntu/ folder. The full path of your root folder is now: **/home/ubuntu/FaceRecognizer**
 6.  After copying code on EC2 server now we can point nginx to load our property website by default. For below steps,
     1. Create this file /etc/nginx/sites-available/bhp.conf. The file content looks like this,
     ```
     server {
 	    listen 80;
             server_name bhp;
-            root /home/ubuntu/BangloreHomePrices/client;
+            root /home/ubuntu/faceRecognizer/UI;
             index app.html;
             location /api/ {
                  rewrite ^/api(.*) $1 break;
@@ -67,7 +67,7 @@ ssh -i "C:\Users\Viral\.ssh\Banglore.pem" ubuntu@ec2-3-133-88-210.us-east-2.comp
     ```
     2. Create symlink for this file in /etc/nginx/sites-enabled by running this command,
     ```
-    sudo ln -v -s /etc/nginx/sites-available/bhp.conf
+   sudo ln -s /etc/nginx/sites-available/gpfr.conf /etc/nginx/sites-enabled/
     ```
     3. Remove symlink for default file in /etc/nginx/sites-enabled directory,
     ```
@@ -80,8 +80,24 @@ ssh -i "C:\Users\Viral\.ssh\Banglore.pem" ubuntu@ec2-3-133-88-210.us-east-2.comp
 7. Now install python packages and start flask server
 ```
 sudo apt-get install python3-pip
-sudo pip3 install -r /home/ubuntu/BangloreHomePrices/server/requirements.txt
-python3 /home/ubuntu/BangloreHomePrices/client/server.py
+sudo pip3 install -r /home/ubuntu/faceRecognizer/server/requirements.txt
+python3 /home/ubuntu/BangloreHomePrices/server/server.py
 ```
-Running last command above will prompt that server is running on port 5000.
-8. Now just load your cloud url in browser (for me it was http://ec2-3-133-88-210.us-east-2.compute.amazonaws.com/) and this will be fully functional website running in production cloud environment
+Running last command above will prompt that server is running on port 5000.<br>
+8. Now just load your cloud url in browser (for me it was http://ec2-df.compute.amazonaws.com/) and this will be fully functional website running in production cloud environment<br><br>
+
+
+# Terminal commands for a performing actions
+
+| Serial No. | Commands | Descriptions|
+| :--- | --- |
+| 01 | pwd | Show the present working directory| 
+| 02 | ll  | Show the all the files in the directory| 
+| 03 | ls | Show the all the folders in the directory | 
+| 04 | less nginx.conf | Read the file| 
+| 05 | press ‘q’ | This will enable you to enter command again.| 
+| 06 | cd sites-enabled/ | Enter inside the folder | 
+| 07 | sudo vim gpfr.conf  | Create the file | 
+| 08 | press  i | Insert mode enable | 
+| 09 |  esc | Exit from the insert mode | 
+| 10 | :wq  | Save the file|<br><br><br><br>
