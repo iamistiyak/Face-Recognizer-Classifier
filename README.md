@@ -105,4 +105,5 @@ Running last command above will prompt that server is running on port 5000.<br>
 | 09 |  esc | Exit from the insert mode | 
 | 10 | :wq  | Save the file|<br><br><br><br>
 
-<video src='https://github.com/iamistiyak/Face-Recognizer-Classifier/blob/main/outputs/functions.mp4' width=700 height=500/>
+# Functional Video
+<video src='https://github.com/iamistiyak/Face-Recognizer-Classifier/blob/main/outputs/functions.mp4'/>
