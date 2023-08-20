@@ -69,8 +69,9 @@ ssh -i "C:\Users\shaik.ssh\gpfr.pem"  ubuntu@.us-east-2.compute.amazonaws.com
     2. Create symlink for this file in /etc/nginx/sites-enabled by running this command,
        
     ```
-   sudo ln -s /etc/nginx/sites-available/gpfr.conf /etc/nginx/sites-enabled/
+     sudo ln -s /etc/nginx/sites-available/gpfr.conf /etc/nginx/sites-enabled/
     ```
+    
     3. Remove symlink for default file in /etc/nginx/sites-enabled directory,
     ```
     sudo unlink default
